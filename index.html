@@ -7,9 +7,8 @@
         document.addEventListener('DOMContentLoaded', function() {
             function isMobileDevice() {
                 const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-                const isSmallScreen = window.innerWidth <= 768; // Adjust this breakpoint as needed
+                const isSmallScreen = window.innerWidth <= 768;
                 
-                // Basic mobile user-agent detection combined with small screen check
                 if (/android|iPad|iPhone|iPod/.test(userAgent) && !window.MSStream || isSmallScreen) {
                     return true;
                 }
@@ -18,7 +17,7 @@
 
             function checkDevice() {
                 if (isMobileDevice()) {
-                    window.location.href = 'https://m.eaglercraft.com'; // Redirect to example.com
+                    window.location.href = 'https://m.eaglercraft.com';
                 }
             }
 
@@ -36,21 +35,21 @@
 
         function triggerTranslate() {
             var userLang = navigator.language || navigator.userLanguage;
-            var langCode = userLang.split('-')[0]; // Extract the main language code (e.g., 'en' from 'en-US')
+            var langCode = userLang.split('-')[0];
 
             // Check if the language is English
             if (langCode !== 'en') {
                 var selectField = document.querySelector("select.goog-te-combo");
                 if (selectField) {
-                    selectField.value = langCode; // Set the value to the user's browser language
-                    selectField.dispatchEvent(new Event('change')); // Trigger the translation
+                    selectField.value = langCode;
+                    selectField.dispatchEvent(new Event('change'));
                 }
             }
         }
 
         window.onload = function() {
             googleTranslateElementInit();
-            setTimeout(triggerTranslate, 1000); // Add a delay to ensure the translation element has loaded
+            setTimeout(triggerTranslate, 1000);
         };
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -634,15 +633,18 @@
         <div class="options" id="options">
             <p>Version</p>
             <select id="Version" class="dropdown">
-		<option value="https://rusello25.github.io/Eaglercraft-1.12.2/">Use Latest Version (1.12.2)</option>
-		<option value="https://eaglymc.online/web-wasm/">EaglyMC (1.20, Modded Version)</option>
+		        <option value="https://eaglercraft.com/mc/1.12.2/">Use Latest Version (1.12.2)</option>
+		        <option value="https://eaglymc.online/web-wasm/">EaglyMC (1.20, Modded Version)</option>
                 <option value="https://rusello25.github.io/Eaglercraft-Lambda-0.7.0/">Eaglercraft Lambda 0.7.0 (1.9.4, Modded Version)</option>
                 <option value="https://rusello25.github.io/Eaglercraft-Zeta-0.0.2/">Eaglercraft Zeta 0.0.2 (1.9, Modded Version)</option>
-                <option value="https://rusello25.github.io/Eaglercraft-1.12.2/">Release 1.12.2</option>
+                <option value="https://eaglercraft.com/mc/1.12.2/">Release 1.12.2</option>
+                <option value="https://eaglercraft.com/mc/1.12.2-wasm/">Release 1.12.2 (WASM-GC)</option>
                 <option value="https://eaglercraft.com/mc/1.8.8/">Release 1.8.8</option>
+                <option value="https://eaglercraft.com/mc/1.8.8-wasm/">Release 1.8.8 (WASM-GC)</option>
                 <option value="https://eaglercraft.com/mc/1.5.2/">Release 1.5.2</option>
                 <option value="https://eaglercraft.com/mc/b1.7.3/">Beta 1.7.3</option>
                 <option value="https://eaglercraft.com/mc/b1.3/">Beta 1.3</option>
+                <option value="https://rusello25.github.io/Eaglercraft-Beta-1.1_02-25w27a-/">Beta 1.1_02</option>
                 <option value="https://eaglercraft.com/mc/a1.2.6/">Alpha 1.2.6</option>
                 <option value="https://eaglercraft.com/mc/indev/">Indev</option>
             </select>
